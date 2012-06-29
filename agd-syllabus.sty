@@ -1,0 +1,79 @@
+\ProvidesPackage{agd-syllabus}
+
+\usepackage[american]{babel}
+\usepackage[babel]{csquotes}
+
+\usepackage{hyperref}
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage[T1]{fontenc}
+\usepackage{tgpagella}
+\usepackage{mathpazo}
+
+%\usepackage{etoolbox}
+
+% Set up \theinstructor to access parameters of \instructor
+\newcommand{\theinstructor}[1]{\csname instructor@#1\endcsname}
+
+\newcommand{\instructorname}[1]{\gdef\instructor@name{#1}} %Instructor name
+\newcommand{\instructoremail}[1]{\gdef\instructor@email{#1}} %Instructor email
+\newcommand{\instructoroffice}[1]{\gdef\instructor@office{#1}} %Instructor office location
+\newcommand{\instructorofficehours}[1]{\gdef\instructor@officehours{#1}} %Instructor office hours
+\newcommand{\instructorphone}[1]{\gdef\instructor@phone{#1}} %Instructor phone number
+
+% Set up \thecourse to access parameters of \course
+\newcommand{\thecourse}[1]{\csname course@#1\endcsname}
+
+\newcommand{\coursename}[1]{\gdef\course@name{#1}} %Course title
+\newcommand{\coursenum}[1]{\gdef\course@num{#1}} %Course number
+\newcommand{\courseinst}[1]{\gdef\course@inst{#1}} %Course institution
+\newcommand{\courseterm}[1]{\gdef\course@term{#1}} %Course term
+\newcommand{\coursetime}[1]{\gdef\course@time{#1}} %Course meeting time
+\newcommand{\courseroom}[1]{\gdef\course@room{#1}} %Course meeting room
+
+% Set up \thequote to access parameters of \quote
+\newcommand{\thequote}[1]{\csname quote@#1\endcsname}
+
+\providetoggle{quote}
+\newcommand{\quotebody}[1]{\toggletrue{quote} \gdef\quote@body{#1}} %Text of quote (optional! 
+\newcommand{\quoteattrib}[1]{\gdef\quote@attrib{#1}} %Attribution of quote
+
+% Set up hyperref
+%\hypersetup{pdfauthor=\theinstructor{name},pdftitle={\thecourse{name} syllabus},pdfpagelabels}
+
+% Define section styling
+\makechapterstyle{syllabus}{
+  \setsecheadstyle{\LARGE\scshape}
+  \setsubsecheadstyle{\normalsize\scshape\itshape}
+}
+\chapterstyle{syllabus}
+
+% Define title header
+\renewcommand{\@maketitle}{%
+  \newpage
+  \null
+  \vskip 1in
+  \vspace{\droptitle}
+  \begin{flushleft}
+    \textsc{\normalsize \thecourse{inst}} \\[\baselineskip]
+    \textbf{\Huge \thecourse{num}: \thecourse{name}} \\[\baselineskip]
+    {\large \theinstructor{name}} \\
+    {\footnotesize \url{\theinstructor{email}}} \\
+    {\footnotesize Office: \theinstructor{office}. Office hours: \theinstructor{officehours}}. \\[\baselineskip]
+    {\footnotesize \thecourse{term}. \thecourse{room}.} \\
+    {\footnotesize \thecourse{time}.} 
+  \end{flushleft}
+
+  \iftoggle{quote}{
+    \vskip .75in
+    \hfill
+    \begin{minipage}{.7\linewidth}
+      \footnotesize \itshape
+      \thequote{body} \\
+      \hfill ---\thequote{attrib} \\ \hrule
+    \end{minipage}
+  }{}
+
+  \vskip 1in
+}
