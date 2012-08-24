@@ -36,7 +36,7 @@
 \newcommand{\thequote}[1]{\csname quote@#1\endcsname}
 
 \providetoggle{quote}
-\newcommand{\quotebody}[1]{\toggletrue{quote} \gdef\quote@body{#1}} %Text of quote (optional! 
+\newcommand{\quotebody}[1]{\toggletrue{quote} \gdef\quote@body{#1}} %Text of quote (optional!
 \newcommand{\quoteattrib}[1]{\gdef\quote@attrib{#1}} %Attribution of quote
 
 % Set up hyperref
@@ -53,7 +53,6 @@
 \renewcommand{\@maketitle}{%
   \newpage
   \null
-  \vskip 1in
   \vspace{\droptitle}
   \begin{flushleft}
     \textsc{\normalsize \thecourse{inst}} \\[\baselineskip]
@@ -63,7 +62,7 @@
     {\footnotesize \theinstructor{phone}} \\
     {\footnotesize Office: \theinstructor{office}. Office hours: \theinstructor{officehours}}. \\[\baselineskip]
     {\footnotesize \thecourse{term}. \thecourse{room}.} \\
-    {\footnotesize \thecourse{time}.} 
+    {\footnotesize \thecourse{time}.}
   \end{flushleft}
 
   \iftoggle{quote}{
