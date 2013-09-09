@@ -78,3 +78,10 @@
 
   \vskip 0.3in
 }
+
+% Make \emph use boldface
+\makeatletter
+\DeclareRobustCommand{\em}{%
+  \@nomath\em \if b\expandafter\@car\f@series\@nil
+  \itshape \else \bfseries \fi}
+\makeatother
