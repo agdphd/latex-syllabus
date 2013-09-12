@@ -1,31 +1,193 @@
 \documentclass[11pt,article]{memoir}
-% Copyright (C) 2013 Andrew Gainer-Dewar <andrew.gainer.dewar@gmail.com>
-% This file may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License, either
-% version 1.2 of this license or (at your option) any later
-% version. The latest version of this license is in:
-% http://www.latex-project.org/lppl.txt
-% and version 1.2 or later is part of all distributions of
-% LaTeX version 1999/12/01 or later.
-
 \usepackage{agd-syllabus}
 
 \instructorname{Dr.\ Andrew Gainer-Dewar}
 \instructoremail{againerdewar@carleton.edu}
 \instructoroffice{CMC 227}
-\instructorofficehours{}
+\instructorofficehours{M 11--12, T 10--11, W 1--2, F 1--2}
 \instructorphone{(507) 222-\textbf{4482}}
 
-\coursename{}
-\coursenum{}
-\courseinst{}
-\courseterm{}
-\coursetime{}
-\courseroom{}
+\coursename{Calculus I}
+\coursenum{MATH 111}
+\courseinst{Carleton College}
+\courseterm{Fall 2013}
+\coursetime{6a (MW 3:10--4:20, F 3:30--4:30)}
+\courseroom{CMC 206}
 
 \begin{document}
 \maketitle
 
-\section*{A Section}
+\section*{Course Description}
+This is a first course in single-variable calculus.
+Calculus is the mathematics of change: its tools allow us to study the way the value of a function changes as its input changes.
+We will develop and study these tools, learn how to use them on many important classes of functions, and see how they may be applied to a wide variety of problems from the social and physical sciences.
+
+\section*{Text}
+The textbook for this course is Rogawski's ``Calculus: Early Transcendentals'', second edition
+(ISBN 978-1-4292-0838-3).
+For this course, only the single-variable material is required, so you may elect to purchase the smaller version of the book.
+Homework problems and readings will be assigned from this text.
+
+\section*{Assignments}
+There will be several types of assignments in this course.
+\begin{description}
+\item[Pre-class readings]
+  Each day's class session will be based on readings from the text.
+  To facilitate this, I will ask several questions in a Moodle assignment before each class meeting.
+  Your responses to these questions will serve two purposes: to guide you as you do the reading, and to give me a sense of where you stand before we meet.
+  Your pre-class responses will be scored as passing ($\checkmark$), exceptional ($+$), or insufficient ($-$) on Moodle, and I will respond with specific comments where appropriate.
+
+  \emph{Your responses to these questions will be due on Moodle by 10AM on the morning of each class session.}
+  This is necessary to give me time to read your responses and plan our class meeting.
+
+\item[Pre-class exercises]
+  In addition to the reflection questions, I will assign several exercises to accompany each reading which will be designed to check specific concepts and make sure you have understood all the material.
+  You should complete these to the best of your ability, then bring them to class with you.
+  They will be the foundation of our work in class; on any given day, you may need to talk through them with peers, work them out on the board, write up your solutions for a specific audience, or any number of other tasks.
+  If you have not made a good-faith effort on these exercises before class, it will show!  
+  I will keep a record of your participation on the same scale as for pre-class response questions ($\checkmark$ / $+$ / $-$).
+
+  \emph{Whether your answers to the exercises are correct or incorrect will have no effect on your grade.
+    I will be checking only to make sure that your effort is sincere.}
+
+\item[Post-class problem sets]
+  After each class, I will assign a second set of problems over the material from that session.
+  These problems will be more challenging, and may require connecting with previous material, thinking critically about mathematical ideas, or applying those ideas to new kinds of problems.
+  These will be graded for mathematical correctness and clarity.
+
+  Each problem set will be due at the beginning of class at the next session after it is assigned.
+  \emph{This due time is rigid; if you will miss class, submit in advance!}
+
+  \emph{I will drop the two lowest problem set grades when computing your final course average.}
+  
+\item[Writing projects]
+  There will be three group writing projects in this course.
+  These will give you an opportunity to think and write critically about the mathematics we will study.
+  I will provide detailed information about the grading process when I give these assignments.
+
+\item[Exams]
+  There will be three exams in this course: two midterms and a final.
+  The midterms will take place in class on 9 October and 30 October.
+  The final exam will take place from 12:00pm to 2:30pm on Monday 25 November, as scheduled by the College; I will also offer this exam with the College's self-schedule option.
+
+  \emph{It is your responsibility to arrange your work and travel schedules so that you can attend and take these exams.}
+\end{description}
+
+\section*{Grades}
+Your final course grade will be computed using a weighted average of the grades from your work throughout the course.
+The weighting system is detailed in the table.
+
+I will provide more information about how to compute letter grades for each assignment type as the course progresses.
+
+Final grades in the course will be computed according to this formula, with one caveat:
+\emph{To earn a grade of C or better in this course, your exam average must be at least a C-.}
+Any student with a calculated course grade of C or better whose exam average is D- or below will receive a grade of C- in the course.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{l l}
+    \toprule
+    Component & Contribution \\
+    \midrule
+    Pre-class responses and exercises & 10\% \\
+    Post-class problem sets & 10\% \\
+    Discussion participation & 10\% \\
+    Writing assignments & 20\% \\
+    Midterm 1 & 15\% \\
+    Midterm 2 & 15\% \\
+    Final exam & 20\% \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section*{Work expectations}
+I expect all your work to be prompt, legible, properly edited, and thoughtful.
+\begin{description}
+\item[Prompt]
+  In general, I will not accept late work except as required by the College.
+  If you are unable to submit work in person, you may email it to me no later than the start of class on the day it is due.
+  If you are ill or otherwise have an exceptional circumstance, \emph{contact me before the assignment is due!}
+  
+\item[Legible]
+  Writing assignments must be typeset using a computer; homework exercises may be handwritten or typed.
+  You may use whatever software you prefer to prepare typed assignments, including Microsoft Word, LibreOffice Writer, and \LaTeX{}\footnote{\LaTeX{} is an efficient typesetting system which is particularly good at formulas. Consider learning it, especially if you plan to pursue math further! I will be very glad to help you with this if you are interested.}.
+  If you submit electronically, you \emph{must} do so in the form of a PDF.
+  If you are unsure how to produce a PDF in your preferred software, I'll be glad to help.
+
+\item[Edited]
+  As a baseline, I expect all written work to have correct spelling and English grammar; it is \emph{your responsibility} to make sure that I can see through the letters and symbols on the page to the ideas you are trying to communicate.
+  If you are uncertain about this aspect of your writing, I will be glad to work with you directly.
+
+\item[Thoughtful]
+  This course will demand a lot of you as a mathematician and scholar.
+  To do this subject justice, you will need to dedicate substantial time and energy to the readings and assignments.
+  If you don't, it will show in the quality of your work.
+  
+  If you are unsure how to proceed with an assignment, I will be glad to discuss it with you in office hours or over email.
+\end{description}
+
+\section*{Use of technology}
+Calculators and other technology are \emph{not} allowed on the exams.
+Accordingly, you should not become dependent on them.
+Technological tools can be valuable for checking your answers on homework problems, but you must know how to do all the work yourself, and you must show it on the homework.
+
+\section*{Collaboration}
+Collaboration with your fellow mathematicians is an important skill.
+Working together can help everyone in a group to get over creative and technical hurdles and lead to increased understanding.
+Moreover, it provides valuable experience in communicating effectively.
+
+I therefore encourage you to work on your homework in small groups.
+However, it is essential that your work reflect your own understanding.
+To demonstrate this, \emph{you must submit work that is entirely your own, with no text copied from or written together with another student}.
+Please also consult the Carleton College handbook section on Academic Honesty.
+
+If you have any questions about this policy or how it applies to a particular situation, please see me about them \emph{before} submitting the work in question.
+
+\section*{Academic Integrity}
+Any work you submit in this course must be your own and compliant with the standards and expectations of the College \href{https://apps.carleton.edu/campus/doc/integrity/}{Academic Integrity Policy}.
+\emph{Any confirmed violation of these policies may result in a failing grade for the assignment involved.}
+
+\section*{Electronic Communication}
+Email will be my primary way to communicate with you outside of class.
+It is \emph{your responsibility} to read any emails I send you promptly.
+
+I will do my best to answer any email concerning the course within twenty-four hours of receiving it.
+This may occasionally be impossible on weekends or when I am travelling.
+
+For records-privacy reasons, I will not discuss grades or evaluation via email.
+Please come see me during office hours if you have questions about your grades.
+
+\section*{Campus Resources}
+I, the Mathematics Department, and Carleton College provide a variety of resources to help you with this course:
+\begin{description}
+\item[Office hours]
+  I have set aside four hours per week for office hours.
+  During these times, I will be available to meet with you individually or in groups to discuss homework, exam prep, or anything else related to the course (or not!).
+  These times are available for all students in both this course and my A\&I seminar, but I don't anticipate that this will be a problem.
+  (If my office hours are so popular that there are frequent conflicts, I'll add more!)
+
+  \emph{If you wish to speak with me privately or you are unable to attend any of my scheduled office hours in a given week, I'll be glad to schedule an appointment with you via email.}
+
+\item[Math Skills Center]
+  The \href{https://apps.carleton.edu/campus/asc/msc/}{Math Skills Center}, located in the CMC, is open seven days a week.
+  It is available for you to use as a study and homework space, and in addition it is staffed by senior students (and the Director, Russ) who are available to help you with your course work on a drop-in or scheduled basis.
+
+  \emph{Please feel free to take advantage of the great help in the CMC!
+    At the same time, please be careful not to fall into the trap of letting a tutor do your work for you.}
+
+\item[Writing Center]
+  The College \href{https://apps.carleton.edu/campus/asc/writingcenter/}{Writing Center}, located in Scoville Hall, is open six days a week.
+  It is staffed by senior students, who are available to help you with your writing on a drop-in or scheduled basis.
+
+\item[Your classmates and peers]
+  No one understands what it's like to be in this class quite as well as your classmates.
+  Work on your homework together!
+  Talk about calculus at lunch!
+  Start a mathematical sketch comedy group!
+
+  \emph{This course is a team effort; our most important goal is to make sure that everyone learns calculus.}
+  If you are struggling, your peers can help you understand difficult material.
+  Conversely, if you feel comfortable with some topic, helping a classmate will help you understand it better.
+\end{description}
 
 \end{document}
